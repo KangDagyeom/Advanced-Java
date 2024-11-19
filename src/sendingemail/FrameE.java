@@ -12,6 +12,7 @@ import javax.mail.PasswordAuthentication;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.mail.Transport;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Hyun
@@ -81,7 +82,7 @@ public class FrameE extends javax.swing.JFrame {
         jPanel3.add(txtto, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 11, 333, -1));
 
         txtfrom.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtfrom.setText("hungndth04416@fpt.edu.vn");
+        txtfrom.setText("Your_email");
         jPanel3.add(txtfrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 56, 333, -1));
         jPanel3.add(txtsubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 100, 333, -1));
 
@@ -120,7 +121,7 @@ public class FrameE extends javax.swing.JFrame {
         // TODO add your handling code here:
         String toEmail = txtto.getText();
         String fromEmail = txtfrom.getText();
-        String fromEmailPassword = "tplx sqer ycsn hmnr";
+        String fromEmailPassword = "Your_app_password";
         String Subjects = txtsubject.getText();
         Properties p = new Properties();
         p.put("mail.smtp.auth", "true");
@@ -141,9 +142,11 @@ public class FrameE extends javax.swing.JFrame {
             message.setSubject(Subjects);
             message.setText(txtareamessage.getText());
             Transport.send(message);
-            
+            JOptionPane.showMessageDialog(this, "The email has been sent to " + toEmail);
         } catch (Exception e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "The email has not been sent to " + toEmail);
+            
         }
 
     }//GEN-LAST:event_btnsendMouseClicked
