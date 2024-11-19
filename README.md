@@ -1,5 +1,3 @@
-# FPOLY_TAINGUYEN_SOF2041
-
 ## 1. Làm giao diện đẹp
 https://www.youtube.com/watch?v=He-1O8Pa4SE&list=PLlGZc17KPrVCGRKtgbdvnGshN8AePlqpd 
 <br/>
